@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
 * {
     margin: 0;
@@ -17,15 +17,16 @@
 .container .contents-wraper {
     width: 70%;
     height: 100%;
-
+    font-family: "Oswald", sans-serif;
     min-height: inherit;
     margin: 0px auto;
     text-align: center;
+    position: relative;
 }
 
 .contents-wraper .header h1 {
     position: relative;
-    font-family: "Poppins", sans-serif;
+
     font-size: 40px;
     text-transform: uppercase;
     font-weight: 700;
@@ -53,7 +54,7 @@
 
 .testItem p {
     margin-bottom: 10px;
-    font-family: "Montserrat", sans-serif;
+
 }
 
 .testRow .testItem:not(.active) {
@@ -62,7 +63,6 @@
 }
 
 .testRow .testItem p {
-    font-size: 18px;
     letter-spacing: 1px;
     line-height: 1.2;
     padding: 10px;
@@ -70,7 +70,7 @@
 
 .contents-wraper .indicators {
     position: absolute;
-    bottom: 30px;
+    bottom: -40px;
     left: 50%;
     transform: translateX(-50%);
     padding: 5px;
@@ -96,6 +96,92 @@
 
 .contents-wraper .indicators div {
     transition: transform 0.3s ease;
+}
+
+.slide-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.slide-image-box,
+.slide-content-box {
+    width: 50%;
+}
+
+.slide-content-box {
+    background-color: #d1d1d1;
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 0 40px;
+}
+
+.slide-content-box p {
+    font-size: 22px;
+}
+
+.slide-content-box .name {
+    font-size: 20px;
+}
+
+.slide-content-box span {
+    font-size: 16px;
+    color: #3f3f3fa2;
+    border-bottom: 2px solid transparent;
+    transition: all .3s ease-in-out;
+
+}
+
+.slide-content-box span:hover {
+    color: #0f0f0fc9;
+    border-bottom: 2px solid #0f0f0fc9;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+
+.slide-content-box h4 {
+    font-size: 14px;
+    font-weight: 400;
+    color: #3f3f3fa2;
+}
+
+.slide-image-box img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.next-prev-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 99;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.next-prev-button #next,
+.next-prev-button #prev {
+    background-color: #0000007e;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 100%;
+    font-size: 12px;
+    -webkit-box-shadow: 0px 0px 65px -12px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 65px -12px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 65px -12px rgba(0, 0, 0, 0.75);
+    cursor: pointer;
 }
 
 @keyframes next1 {
