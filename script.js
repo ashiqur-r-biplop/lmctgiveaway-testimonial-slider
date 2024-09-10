@@ -4,7 +4,7 @@ let testSlide = document.querySelectorAll(".testItem");
 let dots = document.querySelectorAll(".dot");
 // Access the prev and next buttons
 let prevButton = document.getElementById("prev");
-let nextButton = document.getElementById("next");
+let nextButton = document.getElementById("next"); 
 
 var counter = 0;
 var deleteInterval;
